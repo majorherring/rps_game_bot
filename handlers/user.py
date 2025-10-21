@@ -16,7 +16,7 @@ async def process_start_command(message:Message):
 
 @user_router.message(Command(commands="help"))
 async def process_help_command(message:Message):
-    await message.answer(text=LEXICON_RU["/help"])
+    await message.answer(text=LEXICON_RU["/help"],reply_markup=yes_no_kb)
 
 
 @user_router.message(F.text == LEXICON_RU["yes_button"])
